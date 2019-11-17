@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>数据结构栈 | zhanglijie博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#数据结构##顺序栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include&amp;lt;iostream&amp;gt;using namespace std;#define MAX 10">
+<meta name="keywords" content="顺序栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构栈">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;zljx&#x2F;zljx.github.io.git&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88&#x2F;index.html">
+<meta property="og:site_name" content="zhanglijie博客">
+<meta property="og:description" content="#数据结构##顺序栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970#include&amp;lt;iostream&amp;gt;using namespace std;#define MAX 10">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-17T07:45:30.344Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/zljx.github.io/atom.xml" title="zhanglijie博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/zljx.github.io/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/zljx.github.io/" id="logo">zhanglijie博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/zljx.github.io/" id="subtitle">当你的才华还撑不起你的野心的时候，你就应该静下心来，学习;当你的能力还驾驭不了你的目标时，就应该沉下心来，历练</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/zljx.github.io/">Home</a>
+        
+          <a class="main-nav-link" href="/zljx.github.io/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/zljx.github.io/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/zljx/zljx.github.io.git"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-数据结构栈" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/zljx.github.io/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88/" class="article-date">
+  <time datetime="2019-11-17T07:44:20.000Z" itemprop="datePublished">2019-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据结构栈
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#数据结构<br>##顺序栈</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">#define MAX 10</span><br><span class="line">typedef struct&#123;</span><br><span class="line">	int base;</span><br><span class="line">	int top;</span><br><span class="line">	int s[MAX];</span><br><span class="line">&#125;SqStack;</span><br><span class="line"></span><br><span class="line">//基本操作说明</span><br><span class="line">void InitStack(SqStack &amp;S);</span><br><span class="line">void push(SqStack &amp;S,int e);</span><br><span class="line">void pop(SqStack &amp;S,int &amp;e);</span><br><span class="line"></span><br><span class="line">//基本操作的算法描述</span><br><span class="line">void InitStack(SqStack &amp;S)</span><br><span class="line">&#123;</span><br><span class="line">	S.base=S.top=0;</span><br><span class="line">&#125;</span><br><span class="line">void push(SqStack &amp;S,int e)</span><br><span class="line">&#123;</span><br><span class="line">	if(S.top==MAX)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;&quot;栈满&quot;&lt;&lt;endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	S.s[S.top]=e;</span><br><span class="line">	S.top+=1;</span><br><span class="line">&#125;</span><br><span class="line">void pop(SqStack &amp;S,int &amp;e)</span><br><span class="line">&#123;</span><br><span class="line">	if(S.top==0)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;&quot;栈空&quot;&lt;&lt;endl;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	S.top-=1;</span><br><span class="line">	e=S.s[S.top];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void print(SqStack S)</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;&quot;栈的各个元素如下：&quot;&lt;&lt;endl;</span><br><span class="line">	for(int i=0;i&lt;S.top;i++)</span><br><span class="line">		cout&lt;&lt;S.s[i]&lt;&lt;&apos; &apos;;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	SqStack S;</span><br><span class="line">	//初始化</span><br><span class="line">	cout&lt;&lt;&quot;初始化栈&quot;&lt;&lt;endl;</span><br><span class="line">	InitStack(S);</span><br><span class="line">	cout&lt;&lt;&quot;栈底和栈顶：&quot;&lt;&lt;S.base&lt;&lt;&apos;,&apos;&lt;&lt;S.top&lt;&lt;endl;</span><br><span class="line">	//入栈</span><br><span class="line">	cout&lt;&lt;&quot;5个元素入栈\n&quot;;</span><br><span class="line">	for(int i=0;i&lt;5;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		push(S,2*i+i);</span><br><span class="line">		cout&lt;&lt;&quot;栈顶为：&quot;&lt;&lt;S.top&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	print(S);</span><br><span class="line">	//出栈</span><br><span class="line">	int x;</span><br><span class="line">	pop(S,x);</span><br><span class="line">	cout&lt;&lt;&quot;出栈元素为:&quot;&lt;&lt;x&lt;&lt;&quot;栈顶&quot;&lt;&lt;S.top&lt;&lt;endl;</span><br><span class="line">	print(S);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/zljx/zljx.github.io.git/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88/" data-id="ck32tjzb70004nggc2p69c4q8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/zljx.github.io/tags/%E9%A1%BA%E5%BA%8F%E6%A0%88/" rel="tag">顺序栈</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/zljx.github.io/2019/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A1%BA%E5%BA%8F%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据结构顺序表</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/zljx.github.io/categories/Java/">Java</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/zljx.github.io/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/zljx.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/zljx.github.io/tags/%E9%A1%BA%E5%BA%8F%E6%A0%88/" rel="tag">顺序栈</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/zljx.github.io/tags/java/" style="font-size: 20px;">java</a> <a href="/zljx.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 10px;">数据结构</a> <a href="/zljx.github.io/tags/%E9%A1%BA%E5%BA%8F%E6%A0%88/" style="font-size: 10px;">顺序栈</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/zljx.github.io/archives/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/zljx.github.io/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88/">数据结构栈</a>
+          </li>
+        
+          <li>
+            <a href="/zljx.github.io/2019/11/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A1%BA%E5%BA%8F%E8%A1%A8/">数据结构顺序表</a>
+          </li>
+        
+          <li>
+            <a href="/zljx.github.io/2019/11/12/Java-String/">Java String</a>
+          </li>
+        
+          <li>
+            <a href="/zljx.github.io/2019/11/11/Java-%E6%8E%A5%E5%8F%A3/">Java:接口</a>
+          </li>
+        
+          <li>
+            <a href="/zljx.github.io/2019/11/11/Java-%E4%B8%8A%E8%BD%AC%E5%9E%8B%E5%AF%B9%E8%B1%A1/">Java:上转型对象</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zljx<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/zljx.github.io/" class="mobile-nav-link">Home</a>
+  
+    <a href="/zljx.github.io/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/zljx.github.io/fancybox/jquery.fancybox.css">
+  <script src="/zljx.github.io/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/zljx.github.io/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

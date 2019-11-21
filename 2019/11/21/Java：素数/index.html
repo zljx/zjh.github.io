@@ -5,16 +5,17 @@
   
 
   
-  <title>about | zhanglijie博客</title>
+  <title>Java：素数 | zhanglijie博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="xxx">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;zljx&#x2F;zljx.github.io.git&#x2F;about&#x2F;index.html">
+  <meta name="description" content="java 输入N以内的全部素数 1234567891011121314151617181920212223242526272829303132package ex3;import java.util.*;public class Sushu &amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; TODO Auto-generated me">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java：素数">
+<meta property="og:url" content="https:&#x2F;&#x2F;github.com&#x2F;zljx&#x2F;zljx.github.io.git&#x2F;2019&#x2F;11&#x2F;21&#x2F;Java%EF%BC%9A%E7%B4%A0%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="zhanglijie博客">
-<meta property="og:description" content="xxx">
+<meta property="og:description" content="java 输入N以内的全部素数 1234567891011121314151617181920212223242526272829303132package ex3;import java.util.*;public class Sushu &amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; TODO Auto-generated me">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-16T12:52:13.130Z">
+<meta property="og:updated_time" content="2019-11-21T12:56:03.529Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/zljx.github.io/atom.xml" title="zhanglijie博客" type="application/atom+xml">
@@ -66,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Java：素数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/zljx.github.io/about/index.html" class="article-date">
-  <time datetime="2019-11-16T12:52:13.000Z" itemprop="datePublished">2019-11-16</time>
+    <a href="/zljx.github.io/2019/11/21/Java%EF%BC%9A%E7%B4%A0%E6%95%B0/" class="article-date">
+  <time datetime="2019-11-21T12:54:20.000Z" itemprop="datePublished">2019-11-21</time>
 </a>
     
   </div>
@@ -80,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      Java：素数
     </h1>
   
 
@@ -88,17 +89,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>java 输入N以内的全部素数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">package ex3;</span><br><span class="line">import java.util.*;</span><br><span class="line">public class Sushu &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub</span><br><span class="line">		@SuppressWarnings(&quot;resource&quot;)</span><br><span class="line">		Scanner reader=new Scanner(System.in);</span><br><span class="line">		int n=reader.nextInt();</span><br><span class="line">		</span><br><span class="line">		if(n&gt;=2)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.printf(2+&quot; &quot;);</span><br><span class="line">			for(int i=3;i&lt;=n;i++)</span><br><span class="line">			&#123;</span><br><span class="line">				int s=1;</span><br><span class="line">				for(int j=2;j&lt;i;j++)</span><br><span class="line">				&#123;</span><br><span class="line">					if(i%j==0)</span><br><span class="line">					&#123;</span><br><span class="line">						s=0;</span><br><span class="line">						break;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				if(s!=0)</span><br><span class="line">					System.out.printf(i+&quot; &quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">			return;	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/zljx/zljx.github.io.git/about/index.html" data-id="ck38pz6m7000kz8gc9hp927rk" class="article-share-link">Share</a>
+      <a data-url="https://github.com/zljx/zljx.github.io.git/2019/11/21/Java%EF%BC%9A%E7%B4%A0%E6%95%B0/" data-id="ck38pz6lc0003z8gc06h04fmp" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/zljx.github.io/tags/java/" rel="tag">java</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/zljx.github.io/2019/11/17/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A0%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数据结构栈</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
